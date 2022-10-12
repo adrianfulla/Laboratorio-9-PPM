@@ -87,9 +87,6 @@ class SummaryFragment : Fragment() {
         }
     }
 
-    /**
-     * Cancel the order and start over.
-     */
     fun cancelOrder() {
         // Reset order in view model
         sharedViewModel.resetOrder()
@@ -98,10 +95,6 @@ class SummaryFragment : Fragment() {
         findNavController().navigate(R.id.action_summaryFragment_to_startFragment)
     }
 
-    /**
-     * This fragment lifecycle method is called when the view hierarchy associated with the fragment
-     * is being removed. As a result, clear out the binding object.
-     */
     override fun onDestroyView() {
         super.onDestroyView()
         binding = null
